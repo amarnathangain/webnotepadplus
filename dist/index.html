@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+  <title>Notepad++ Web Edition</title>
+  <meta name="description" content="A production-ready web-based code editor inspired by Notepad++. Multi-tab, syntax highlighting, bookmarks, macros, themes, and more." />
+  <meta name="theme-color" content="#1e1e1e" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <script type="module" crossorigin src="/assets/index-CeTUpWcL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DUDzSGh_.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Menu Bar -->
+    <div id="menubar">
+      <div class="menu-trigger" data-menu="file">File</div>
+      <div class="menu-trigger" data-menu="edit">Edit</div>
+      <div class="menu-trigger" data-menu="search">Search</div>
+      <div class="menu-trigger" data-menu="view">View</div>
+      <div class="menu-trigger" data-menu="bookmarks">Bookmarks</div>
+      <div class="menu-trigger" data-menu="macro">Macro</div>
+      <div class="menu-trigger" data-menu="language">Language</div>
+      <div class="menu-trigger" data-menu="settings">Settings</div>
+      <div class="menu-trigger" data-menu="help">Help</div>
+    </div>
+
+    <!-- Dropdown menus (hidden by default) -->
+    <div id="menu-dropdown" class="dropdown hidden"></div>
+
+    <!-- Toolbar -->
+    <div id="toolbar">
+      <button data-action="new" title="New (Ctrl+N)">📄</button>
+      <button data-action="open" title="Open Folder">📂</button>
+      <button data-action="save" title="Save (Ctrl+S)">💾</button>
+      <button data-action="saveAll" title="Save All">💾✦</button>
+      <span class="toolbar-sep"></span>
+      <button data-action="undo" title="Undo (Ctrl+Z)">↩</button>
+      <button data-action="redo" title="Redo (Ctrl+Y)">↪</button>
+      <span class="toolbar-sep"></span>
+      <button data-action="cut" title="Cut (Ctrl+X)">✂</button>
+      <button data-action="copy" title="Copy (Ctrl+C)">📋</button>
+      <button data-action="paste" title="Paste (Ctrl+V)">📌</button>
+      <span class="toolbar-sep"></span>
+      <button data-action="find" title="Find (Ctrl+F)">🔍</button>
+      <button data-action="replace" title="Replace (Ctrl+H)">🔄</button>
+      <span class="toolbar-sep"></span>
+      <button data-action="zoomIn" title="Zoom In (Ctrl++)">➕</button>
+      <button data-action="zoomOut" title="Zoom Out (Ctrl+-)">➖</button>
+      <span class="toolbar-sep"></span>
+      <button data-action="wordwrap" title="Word Wrap">↔</button>
+      <button data-action="format" title="Format Document">✨</button>
+      <button data-action="lint" title="Run Linter">⚡</button>
+    </div>
+
+    <!-- Tab Bar -->
+    <div id="tabbar"></div>
+
+    <!-- Main Area -->
+    <div id="main-area">
+      <!-- Sidebar (toggle via View menu) -->
+      <aside id="sidebar" class="hidden">
+        <div class="sidebar-header">
+          <span>Explorer</span>
+          <button id="sidebar-close" title="Close">&times;</button>
+        </div>
+        <div id="file-tree"></div>
+      </aside>
+
+      <!-- Editor Container -->
+      <div id="editor-container"></div>
+    </div>
+
+    <!-- Bottom Panels -->
+    <div id="bottom-panels" class="hidden">
+      <div id="panel-tabs">
+        <button class="panel-tab active" data-panel="problems">Problems</button>
+        <button class="panel-tab" data-panel="search-results">Search Results</button>
+        <button class="panel-tab" data-panel="output">Output</button>
+        <button id="panel-close" title="Close">&times;</button>
+      </div>
+      <div id="panel-problems" class="panel-body active"></div>
+      <div id="panel-search-results" class="panel-body"></div>
+      <div id="panel-output" class="panel-body"></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div id="statusbar">
+      <span id="status-pos">Ln 1, Col 1</span>
+      <span id="status-sel"></span>
+      <span class="status-sep"></span>
+      <span id="status-stats">0 lines, 0 words, 0 chars</span>
+      <span class="status-sep"></span>
+      <span id="status-eol" title="End of line">CRLF</span>
+      <span id="status-encoding">UTF-8</span>
+      <span id="status-indent" title="Indentation">Spaces: 4</span>
+      <span id="status-lang" title="Click to change language">Plain Text</span>
+      <span class="status-spacer"></span>
+      <span id="status-msg"></span>
+    </div>
+  </div>
+
+</body>
+</html>
