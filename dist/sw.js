@@ -1,11 +1,12 @@
 const CACHE_NAME = 'npp-web-v3';
+// Base path will be handled by Vite's base config
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles/app.css',
-  '/src/app.js',
-  '/src/editor.js',
-  '/manifest.json',
+  './',
+  './index.html',
+  './styles/app.css',
+  './src/app.js',
+  './src/editor.js',
+  './manifest.json',
 ];
 
 self.addEventListener('install', (e) => {
